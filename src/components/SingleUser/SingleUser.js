@@ -13,7 +13,7 @@ const SingleUser = ({ ...props }) => {
             : 'Unemployed'}
         </div>
         <div className="user_fullname">
-          {props.name.first + ' ' + props.name.last}
+          {props.name.first + ' ' + props.name.last || 'Yasin Çelebi'}
         </div>
         <div className="user_state">
           {props.location}, <span>{props.nat}</span>
@@ -27,13 +27,14 @@ export default SingleUser;
 SingleUser.propTypes = {
   picture: PropTypes.string,
   job: PropTypes.array,
-  name: PropTypes.object,
+  name: PropTypes.string,
   location: PropTypes.string,
   nat: PropTypes.string,
 };
 SingleUser.defaultProps = {
-  picture: null,
-  job: null,
-  name: null,
-  location: null,
+  picture: '',
+  job: '',
+  name: '',
+  location: '',
+  nat: '',
 };
