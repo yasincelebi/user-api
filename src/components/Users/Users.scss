@@ -1,0 +1,9 @@
+.users_list {
+  display: flex;
+  margin-left: 150px;
+}
+@media screen and(max-width:720px) {
+  .users_list {
+    margin-left: 1rem;
+  }
+}
