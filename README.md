@@ -18,4 +18,4 @@ and
 - [x] Sidebar
 - [x] Basic Style
 - [ ] Router
-- [ ] Login
+- [ ] Client-Side Login
