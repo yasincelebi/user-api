@@ -1,7 +1,7 @@
 # Scratch Paper With RandomuserAPI And Style
 
 In this project, random users fetched from
-[RandomUser](https://randomuser.me) and random jobs were fetched from [DataAtWork.org](dataatwork.org) website.
+[RandomUser](https://www.randomuser.me) and random jobs were fetched from [DataAtWork.org](https://www.dataatwork.org) website.
 
 ##### You can edit the 'UserContext.js' file to modify the queries.
 
