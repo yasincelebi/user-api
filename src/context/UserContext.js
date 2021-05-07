@@ -15,7 +15,7 @@ export const UserProvider = (props) => {
   const fetchData = () => {
     dispatch({ type: 'START_FETCH' });
     axios
-      .get('http://randomuser.me/api/?results=50')
+      .get('https://randomuser.me/api/?results=50')
       .then((res) =>
         dispatch({ type: 'SUCCESS_FETCH', payload: res.data.results })
       )
