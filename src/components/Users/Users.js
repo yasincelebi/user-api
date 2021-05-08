@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useContext } from 'react';
 /* import SingleUser from '../SingleUser/SingleUser'; */
 import { UserContext } from '../../context/UserContext';
@@ -5,8 +6,10 @@ import { mapArr } from '../../helpers/helper';
 import SingleUser from '../SingleUser/SingleUser';
 import { Col, Container, Row } from 'reactstrap';
 import './Users.scss';
-const Users = () => {
-  const { user, job /* , loading, error */ } = useContext(UserContext);
+
+import { withRouter } from 'react-router-dom';
+const Users = ({ history }) => {
+  const { user, job } = useContext(UserContext);
   const mappedUsers = mapArr(user);
   const mappedJobs = mapArr(job);
   return (
@@ -15,7 +18,31 @@ const Users = () => {
         <div className="users_list">
           <Row>
             {mappedUsers.map((e, i) => {
-              const { picture, location, name, nat } = e;
+              const {
+                picture,
+                location,
+                name,
+                nat,
+                login,
+                gender,
+                email,
+                dob,
+                phone,
+              } = e;
+
+              const handleClick = () => {
+                history.push(`${name.first + name.last}`, {
+                  picture,
+                  location,
+                  gender,
+                  name,
+                  nat,
+                  login,
+                  email,
+                  dob,
+                  phone,
+                });
+              };
               return (
                 <Col key={i} lg="4">
                   <SingleUser
@@ -25,6 +52,7 @@ const Users = () => {
                     key={i}
                     job={mappedJobs.map((e) => e.title)}
                     nat={nat}
+                    clickEvent={handleClick}
                   />
                 </Col>
               );
@@ -36,4 +64,4 @@ const Users = () => {
   );
 };
 
-export default Users;
+export default withRouter(Users);
