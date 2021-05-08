@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './SingleUser.scss';
 const SingleUser = ({ ...props }) => {
   return (
-    <div className="single_user_wrapper">
+    <div className="single_user_wrapper" onClick={props.clickEvent}>
       <div className="single_user_inwrapper">
         <img src={props.picture} className="user_photo_thumbnail" />
         <div className="user_job">
@@ -27,9 +27,10 @@ export default SingleUser;
 SingleUser.propTypes = {
   picture: PropTypes.string,
   job: PropTypes.array,
-  name: PropTypes.string,
+  name: PropTypes.object,
   location: PropTypes.string,
   nat: PropTypes.string,
+  clickEvent: PropTypes.func,
 };
 SingleUser.defaultProps = {
   picture: '',
