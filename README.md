@@ -21,5 +21,5 @@ and
 - [x] Box Model
 - [x] Sidebar
 - [x] Basic Style
-- [ ] Router
+- [x] Router
 - [ ] Client-Side Login
