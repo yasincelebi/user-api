@@ -31,6 +31,7 @@ SingleUser.propTypes = {
   location: PropTypes.string,
   nat: PropTypes.string,
   clickEvent: PropTypes.func,
+  loadProfile: PropTypes.bool,
 };
 SingleUser.defaultProps = {
   picture: '',
