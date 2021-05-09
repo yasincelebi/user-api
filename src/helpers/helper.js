@@ -9,3 +9,11 @@ export const mapArr = (arr) => {
   });
   return mappedArray;
 };
+/** 
+   * Makes the first letter of the given string to uppercase
+  @param {string} String 
+  @return {string} String
+  */
+export const firstLetterUpper = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+};
