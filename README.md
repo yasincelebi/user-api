@@ -22,4 +22,3 @@ and
 - [x] Sidebar
 - [x] Basic Style
 - [x] Router
-- [ ] Client-Side Login
