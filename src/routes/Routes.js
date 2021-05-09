@@ -10,7 +10,7 @@ const Routes = () => {
         <Route exact path="/">
           <MainPage />
         </Route>
-        <Route path="/:username" component={Profile} />
+        <Route path="/:username" render={(props) => <Profile {...props} />} />
       </Switch>
     </div>
   );
