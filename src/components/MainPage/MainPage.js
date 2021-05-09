@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Sidebar from '../Sidebar/Sidebar';
 import Users from '../Users/Users';
 import './MainPage.scss';
