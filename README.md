@@ -7,7 +7,7 @@ In this project, random users fetched from
 
 Since the dataatwork website does not have an SSL certificate, there are no jobs in deploy. but if you use localhost it will be fixed.
 
-### [Live Demo](https://user-api-igalctisv-yasincelebi.vercel.app/)
+### [Live Demo](http://user-api-tau.vercel.app/)
 
 ### `yarn install`
 
